@@ -1,12 +1,125 @@
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
+}
+
+* {
+  margin: 0;
 }
 
 html,
 body {
-  margin: 0;
-  padding: 0;
+  height: 100%;
 }
 
-/* Add styles here! */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  font-size: 20px;
+  letter-spacing: -0.005rem;
+  margin-bottom: var(--spacing-xs);
+}
+
+p:last-of-type {
+  margin-bottom: 0;
+}
+
+strong {
+  color: var(--color-primary);
+}
+
+
+.max-width-wrapper {
+  max-width: 50rem;
+  margin: auto;
+  padding-left: var(--spacing-sm);
+  padding-right: var(--spacing-sm);
+  background-color: var(--color-white);
+}
+
+.intro-chunk {
+  max-width: 25.9375rem;
+  padding-top: var(--spacing-xl);
+  padding-bottom: var(--spacing-xxl);
+}
+
+.title {
+  margin-bottom: var(--spacing-lg);
+}
+
+main {
+  background-color: var(--color-gray-300);
+  padding-top: var(--spacing-xxl);
+  padding-bottom: var(--spacing-xxl);
+  border-bottom: var(--spacing-xxs) solid var(--color-gray-400);
+  border-top: var(--spacing-xxs) solid var(--color-gray-400);
+}
+
+.card {
+  padding-top: var(--spacing-xxs);
+  padding-bottom: var(--spacing-sm);
+}
+
+.indented-heading {
+  background-color: var(--color-secondary-light);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+  margin-left: calc(var(--spacing-md) - var(--spacing-md) * 2);
+  max-width: fit-content;
+  box-shadow: var(--color-secondary-dark) 0 var(--spacing-xxs);
+}
+
+:root {
+  --spacing-xxs: 8px;
+  --spacing-xs: 16px;
+  --spacing-sm: 24px;
+  --spacing-md: 32px;
+  --spacing-lg: 48px;
+  --spacing-xl: 64px;
+  --spacing-xxl: 96px;
+  --spacing-xxxl: 128px;
+  --font-size-sm: 1rem;
+  --font-size-md: 1.25rem;
+  --font-size-lg: 1.5rem;
+  --font-size-xl: 2rem;
+  --color-primary: hsl(160deg, 100%, 30%);
+  --color-secondary-light: hsl(45deg, 100%, 50%);
+  --color-secondary-dark: hsl(45deg, 100%, 40%);
+  --color-black: hsl(0deg, 0%, 0%);
+  --color-gray-100: hsl(0deg, 0%, 10%);
+  --color-gray-200: hsl(0deg, 0%, 30%);
+  --color-gray-300: hsl(0deg, 0%, 40%);
+  --color-gray-400: hsl(0deg, 0%, 60%);
+  --color-white: hsl(0deg, 0%, 100%);
+}
